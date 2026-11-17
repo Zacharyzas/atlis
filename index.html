@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Atlis — know why your stocks moved</title>
+<title>Atlis: know why your stocks moved</title>
 <meta name="description" content="Atlis finds the real news behind every move in your portfolio and explains it in one line. Coming soon to iPhone." />
-<meta property="og:title" content="Atlis — know why your stocks moved" />
+<meta property="og:title" content="Atlis: know why your stocks moved" />
 <meta property="og:description" content="The real reason behind every move in your portfolio, in one line. Coming soon to iPhone." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://zacharyzas.github.io/atlis/" />
@@ -45,15 +45,13 @@
   .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
   .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; letter-spacing: -.01em; text-decoration: none; }
   .brand img { width: 30px; height: 30px; border-radius: 8px; }
-  .pill { display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 16px; border-radius: 999px; font-size: 14px; font-weight: 500; text-decoration: none; background: var(--text); color: #0A0A0B; transition: transform .2s var(--ease), background .2s; }
-  .pill:hover { transform: translateY(-1px); background: #fff; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 16px; border-radius: 999px; font-size: 14px; font-weight: 500; text-decoration: none; background: var(--text); color: #0A0A0B; transition: background .2s; }
+  .pill:hover { background: #fff; }
   .soon-tag { font-size: 13px; color: var(--text-2); display: inline-flex; align-items: center; gap: 8px; }
 
   /* ---------- Hero ---------- */
-  .hero { position: relative; text-align: center; padding-top: 56px; overflow: hidden; }
-  .badge { display: inline-flex; align-items: center; gap: 8px; height: 32px; padding: 0 14px 0 12px; border-radius: 999px; border: 1px solid var(--border-2); background: rgba(255,255,255,.02); color: var(--text-2); font-size: 13px; font-weight: 500; }
-  .badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--pos); box-shadow: 0 0 0 4px rgba(67,192,107,.15); }
-  h1 { font-weight: 600; font-size: clamp(44px, 7.6vw, 88px); line-height: 1.02; letter-spacing: -.045em; margin: 24px auto 0; max-width: 11ch; background: linear-gradient(180deg, #FFFFFF 35%, #A9AAB2 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero { position: relative; text-align: center; padding-top: 72px; overflow: hidden; }
+  h1 { font-weight: 600; font-size: clamp(44px, 7.6vw, 88px); line-height: 1.02; letter-spacing: -.045em; margin: 0 auto; max-width: 11ch; color: var(--text); }
   .hero .sub { margin: 20px auto 0; max-width: 30em; color: var(--text-2); font-size: clamp(17px, 2vw, 20px); line-height: 1.45; }
   .cta-row { margin-top: 32px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
 
@@ -71,8 +69,6 @@
 
   /* The 3-phone stage */
   .stage { --pw: clamp(220px, 27vw, 310px); --spread: clamp(150px, 23vw, 300px); --s: 0; position: relative; height: calc(var(--pw) * 1.72 + 48px); margin-top: 64px; -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent); mask-image: linear-gradient(to bottom, #000 72%, transparent); }
-  .stage::before { content: ''; position: absolute; left: 50%; top: 4%; width: min(1100px, 160vw); height: 70%; transform: translateX(-50%); background: radial-gradient(closest-side, rgba(61,111,224,.32), rgba(61,111,224,.08) 55%, transparent); pointer-events: none; }
-  .stage::after { content: ''; position: absolute; left: 50%; top: 22%; width: min(1500px, 220vw); aspect-ratio: 1; transform: translateX(-50%); border-radius: 50%; border-top: 1px solid rgba(91,141,239,.35); background: radial-gradient(closest-side, transparent 92%, rgba(91,141,239,.06)); pointer-events: none; }
   .slot { position: absolute; top: 0; left: 50%; will-change: transform; }
   .slot.c { width: var(--pw); z-index: 3; transform: translate3d(-50%, calc(var(--s) * -24px), 0); }
   .slot.l, .slot.r { width: calc(var(--pw) * .86); z-index: 2; }
@@ -82,13 +78,10 @@
   .rise { animation: rise 1.2s var(--ease) both; }
   .slot.c .rise { animation-delay: .35s; }
   .slot.l .rise, .slot.r .rise { animation-delay: .55s; }
-  .float { animation: float 7s ease-in-out infinite; }
-  .slot.l .float { animation-delay: -2.3s; } .slot.r .float { animation-delay: -4.6s; }
-  @keyframes rise { from { opacity: 0; transform: translateY(80px) scale(.96); } to { opacity: 1; transform: none; } }
-  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  @keyframes rise { from { opacity: 0; transform: translateY(48px); } to { opacity: 1; transform: none; } }
 
   /* Phone frame (pure CSS; the screenshot already includes the status bar + island) */
-  .phone { position: relative; padding: 3.2%; border-radius: 15.5% / 7.3%; background: linear-gradient(160deg, #3A3B41, #16171A 40%, #232428); box-shadow: inset 0 0 0 1px rgba(255,255,255,.08), 0 0 0 1px #000, 0 50px 100px -30px rgba(0,0,0,.9), 0 30px 60px -40px rgba(61,111,224,.35); }
+  .phone { position: relative; padding: 3.2%; border-radius: 15.5% / 7.3%; background: linear-gradient(160deg, #3A3B41, #16171A 40%, #232428); box-shadow: inset 0 0 0 1px rgba(255,255,255,.08), 0 0 0 1px #000, 0 40px 80px -30px rgba(0,0,0,.85); }
   .phone img { width: 100%; border-radius: 13% / 6%; background: #0A0A0B; }
   /* Dynamic Island, drawn exactly where iOS puts it (some screenshots omit it). */
   .phone::after { content: ''; position: absolute; left: 35.3%; width: 29.2%; top: 3.03%; height: 4.07%; border-radius: 999px; background: #000; }
@@ -98,19 +91,14 @@
   /* Load-in stagger for hero copy */
   .in { animation: fadeUp .9s var(--ease) both; }
   .in.d1 { animation-delay: .05s; } .in.d2 { animation-delay: .15s; } .in.d3 { animation-delay: .25s; }
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 
   /* ---------- Features ---------- */
   .features { padding: 120px 0 40px; display: grid; gap: 140px; }
   .feature { display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
-  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--primary); }
-  .feature.green .eyebrow { color: var(--pos); }
-  h2 { font-weight: 600; font-size: clamp(34px, 4.6vw, 54px); line-height: 1.05; letter-spacing: -.04em; margin-top: 14px; }
+  h2 { font-weight: 600; font-size: clamp(34px, 4.6vw, 54px); line-height: 1.05; letter-spacing: -.04em; }
   .lede { margin-top: 18px; color: var(--text-2); font-size: 18px; line-height: 1.5; max-width: 26em; }
-  .panel { position: relative; aspect-ratio: 1 / 1.02; border-radius: 32px; overflow: hidden; background: var(--card); border: 1px solid var(--border); isolation: isolate; }
-  .panel::before { content: ''; position: absolute; inset: 0; z-index: -1; background: radial-gradient(70% 60% at 50% 100%, rgba(61,111,224,.30), transparent 70%), radial-gradient(50% 40% at 50% 0%, rgba(255,255,255,.04), transparent); }
-  .feature.green .panel::before { background: radial-gradient(70% 60% at 50% 100%, rgba(67,192,107,.24), transparent 70%), radial-gradient(50% 40% at 50% 0%, rgba(255,255,255,.04), transparent); }
-  .panel .grid { position: absolute; inset: 0; z-index: -1; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 44px 44px; -webkit-mask-image: radial-gradient(70% 70% at 50% 40%, #000, transparent); mask-image: radial-gradient(70% 70% at 50% 40%, #000, transparent); }
+  .panel { position: relative; aspect-ratio: 1 / 1.02; border-radius: 28px; overflow: hidden; background: #131417; }
   .panel-phone { position: absolute; left: 50%; top: 11%; width: 58%; transform: translate(-50%, 0); transition: transform 1.2s var(--ease), opacity 1.2s var(--ease); }
   .js .panel-phone { opacity: 0; transform: translate(-50%, 70px); }
   .js .panel.seen .panel-phone { opacity: 1; transform: translate(-50%, 0); }
@@ -122,22 +110,16 @@
   .js .reveal { opacity: 0; transform: translateY(28px); }
   .js .reveal.seen { opacity: 1; transform: none; }
 
-  /* ---------- Honesty strip ---------- */
-  .honest { padding: 120px 0 0; }
-  .honest-head { text-align: center; }
-  .tiles { margin-top: 48px; display: grid; grid-template-columns: 1fr; gap: 14px; }
-  .tile { padding: 28px; border-radius: 24px; background: var(--card); border: 1px solid var(--border); }
-  .js .tile.seen { transition: opacity 1s var(--ease), transform .4s var(--ease), border-color .4s; }
-  .tile:hover, .js .tile.seen:hover { transform: translateY(-4px); border-color: var(--border-2); }
-  .tile .ic { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(91,141,239,.12); }
-  .tile h3 { margin-top: 20px; font-weight: 600; font-size: 19px; letter-spacing: -.015em; }
-  .tile p { margin-top: 6px; color: var(--text-2); font-size: 15.5px; }
-  .tile .dash { color: var(--text); }
+  /* ---------- What Atlis won't do ---------- */
+  .honest { padding: 140px 0 0; }
+  .rules { margin-top: 40px; border-top: 1px solid var(--border); }
+  .rule { display: grid; grid-template-columns: 1fr; gap: 6px; padding: 24px 0; border-bottom: 1px solid var(--border); }
+  .rule dt { font-weight: 600; font-size: 20px; letter-spacing: -.015em; }
+  .rule dd { color: var(--text-2); font-size: 17px; }
 
   /* ---------- Final CTA ---------- */
   .final { position: relative; text-align: center; padding: 160px 0 140px; overflow: hidden; }
-  .final::before { content: ''; position: absolute; left: 50%; top: 50%; width: min(900px, 150vw); height: 560px; transform: translate(-50%, -50%); background: radial-gradient(closest-side, rgba(61,111,224,.22), transparent); pointer-events: none; }
-  .final .mark { position: relative; width: 84px; height: 84px; margin: 0 auto; border-radius: 22px; box-shadow: 0 20px 60px -10px rgba(61,111,224,.5), 0 0 0 1px rgba(255,255,255,.08); }
+  .final .mark { position: relative; width: 84px; height: 84px; margin: 0 auto; border-radius: 22px; box-shadow: 0 16px 40px -12px rgba(0,0,0,.8), 0 0 0 1px rgba(255,255,255,.08); }
   .final h2 { position: relative; margin-top: 28px; font-size: clamp(38px, 5.4vw, 64px); }
   .final .lede { position: relative; margin: 14px auto 0; }
   .final .cta-row { position: relative; }
@@ -151,13 +133,14 @@
 
   /* ---------- Desktop ---------- */
   @media (min-width: 880px) {
-    .hero { padding-top: 72px; }
+    .hero { padding-top: 104px; }
     .feature { grid-template-columns: 5fr 7fr; gap: 72px; }
     .feature.flip { grid-template-columns: 7fr 5fr; }
     .feature.flip .copy { order: 2; }
     .panel { aspect-ratio: 1 / .9; }
     .panel-phone { width: 46%; top: 10%; }
-    .tiles { grid-template-columns: repeat(3, 1fr); }
+    .rule { grid-template-columns: 5fr 7fr; gap: 72px; padding: 28px 0; }
+    .rule dd { padding-top: 2px; }
     footer .wrap { flex-direction: row; justify-content: space-between; align-items: center; }
   }
   @media (max-width: 520px) {
@@ -193,9 +176,8 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <div class="badge in d1"><span class="dot"></span>Coming soon to iPhone</div>
-      <h1 class="in d2">Know why your stocks moved.</h1>
-      <p class="sub in d3">Atlis finds the real news behind every move in your portfolio and explains it in one line.</p>
+      <h1 class="in d1">Know why your stocks moved.</h1>
+      <p class="sub in d2">Atlis finds the real news behind every move in your portfolio and explains it in one line.</p>
       <div class="cta-row in d3">
         <form class="waitlist" hidden novalidate>
           <input type="email" name="email_address" placeholder="Your email" autocomplete="email" aria-label="Email address" required />
@@ -207,9 +189,9 @@
     </div>
 
     <div class="stage" id="stage" aria-hidden="true">
-      <div class="slot l"><div class="rise"><div class="float"><div class="phone"><img src="./assets/screen-stock.jpg" alt="" width="662" height="1440" /></div></div></div></div>
-      <div class="slot r"><div class="rise"><div class="float"><div class="phone"><img src="./assets/screen-copilot.jpg" alt="" width="662" height="1440" /></div></div></div></div>
-      <div class="slot c"><div class="rise"><div class="float"><div class="phone"><img src="./assets/screen-why.jpg" alt="" width="662" height="1440" /></div></div></div></div>
+      <div class="slot l"><div class="rise"><div class="phone"><img src="./assets/screen-stock.jpg" alt="" width="662" height="1440" /></div></div></div>
+      <div class="slot r"><div class="rise"><div class="phone"><img src="./assets/screen-copilot.jpg" alt="" width="662" height="1440" /></div></div></div>
+      <div class="slot c"><div class="rise"><div class="phone"><img src="./assets/screen-why.jpg" alt="" width="662" height="1440" /></div></div></div>
     </div>
     <p class="hero-caption">Real screens from the app · example portfolio · prices from Nov 16, 2026</p>
   </section>
@@ -218,75 +200,52 @@
     <div class="features">
       <section class="feature">
         <div class="copy reveal">
-          <p class="eyebrow">Why it moved</p>
           <h2>The real reason, in one line.</h2>
           <p class="lede">The actual headline behind each move, with its source. If there isn't one, Atlis won't guess.</p>
         </div>
         <div class="panel low reveal">
-          <div class="grid"></div>
           <div class="panel-phone"><div class="phone"><img src="./assets/screen-stock.jpg" alt="Atlis stock page for NVIDIA: down 4.1% today, with the headline behind the move and its source" width="662" height="1440" loading="lazy" /></div></div>
         </div>
       </section>
 
-      <section class="feature flip green">
+      <section class="feature flip">
         <div class="copy reveal">
-          <p class="eyebrow">Portfolio</p>
           <h2>Your money, at a glance.</h2>
           <p class="lede">Today's move, your gain since you bought, and every holding, live.</p>
         </div>
         <div class="panel reveal">
-          <div class="grid"></div>
           <div class="panel-phone"><div class="phone"><img src="./assets/screen-portfolio.jpg" alt="Atlis portfolio screen showing total value, today's change and gain since bought, with a one-month chart" width="662" height="1440" loading="lazy" /></div></div>
         </div>
       </section>
 
       <section class="feature">
         <div class="copy reveal">
-          <p class="eyebrow">Radar</p>
           <h2>What's moving, and is it real?</h2>
           <p class="lede">Every night Radar scans 2,400 companies for a real, dated reason behind the noise. Never a stock tip.</p>
         </div>
         <div class="panel reveal">
-          <div class="grid"></div>
           <div class="panel-phone"><div class="phone"><img src="./assets/screen-radar.jpg" alt="Atlis Radar screen listing companies with a filed reason, and how loud and how sure each one is" width="662" height="1440" loading="lazy" /></div></div>
         </div>
       </section>
 
       <section class="feature flip">
         <div class="copy reveal">
-          <p class="eyebrow">Copilot</p>
-          <h2>Ask anything. Get a straight answer.</h2>
-          <p class="lede">Plain-English answers about your own stocks, whenever you need them.</p>
+          <h2>Ask about your stocks in plain English.</h2>
+          <p class="lede">Why is it down? Is it too much of my portfolio? Copilot answers about the stocks you actually own.</p>
         </div>
         <div class="panel reveal">
-          <div class="grid"></div>
           <div class="panel-phone"><div class="phone"><img src="./assets/screen-copilot.jpg" alt="Atlis Copilot screen offering to explain why a stock in the portfolio is down today" width="662" height="1440" loading="lazy" /></div></div>
         </div>
       </section>
     </div>
 
     <section class="honest">
-      <div class="honest-head reveal">
-        <p class="eyebrow">Honest by design</p>
-        <h2>No hype. No guesses.</h2>
-      </div>
-      <div class="tiles">
-        <div class="tile reveal">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B8DEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8z"/></svg></div>
-          <h3>Real headlines</h3>
-          <p>Every reason shows where it came from.</p>
-        </div>
-        <div class="tile reveal">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B8DEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8"/></svg></div>
-          <h3>Never a stock tip</h3>
-          <p>Atlis explains. It never says buy or sell.</p>
-        </div>
-        <div class="tile reveal">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5B8DEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
-          <h3>No made-up numbers</h3>
-          <p>If a number isn't known, you see <span class="dash">—</span> instead.</p>
-        </div>
-      </div>
+      <h2 class="reveal">What Atlis won't do.</h2>
+      <dl class="rules">
+        <div class="rule reveal"><dt>Guess.</dt><dd>Every reason is a real headline, and it shows you the source.</dd></div>
+        <div class="rule reveal"><dt>Tell you to buy or sell.</dt><dd>It explains what happened. The decision stays yours.</dd></div>
+        <div class="rule reveal"><dt>Make up a number.</dt><dd>If something isn't known, you see a dash, not an estimate.</dd></div>
+      </dl>
     </section>
   </div>
 
